@@ -1,0 +1,60 @@
+\documentclass[a4paper, 11pt, parskip, colorful]{lecturenotes}
+
+% lualatex -shell-escape -aux-dir=".aux" main.tex
+
+\author{Daniel Jakob}
+\makeatletter
+\modulecode{MEEN40060}
+\modulename{Fracture Mechanics}
+\modulecoord{Dr Neal Murphy (\email{neal.murphy@ucd.ie})}
+\modulelecturers{Dr Neal Murphy}
+\moduletas{Dr Ehsan Rezvani}
+\title{\@modulecode~\@modulename~--~Lecture Notes and Module Related Content}
+\makeatother
+
+\begin{document}
+
+\input{parts/other/titlepage}
+
+\part{Lecture Notes}
+\input{parts/notes/history.tex}
+\input{parts/notes/lefm.tex}
+\input{parts/notes/fatiguecrackgrowth.tex}
+\input{parts/notes/epfm.tex}
+
+% \part{Tutorials}
+% \input{parts/tutorials/radiativeheattransfer.tex}
+
+\makeatletter
+\titlespacing*{\chapter} {0pt}{2pt}{2pt}
+\titleformat{\chapter}
+	{\itshape\Large}
+	{\color{dark_blue}\normalfont}
+	{0em}
+	{\raggedright\color{dark_blue}\normalfont}
+\titleformat{\section}
+	{\itshape\Large}
+	{\color{main_accent}\normalfont}
+	{0em}
+	{\raggedright\color{main_accent}\itshape}
+\titleformat{\subsection}
+	{\itshape\large}
+	{\color{lighter_accent}\normalfont}
+	{0em}
+	{\raggedright\color{lighter_accent}\itshape}
+\pdfstringdefDisableCommands{\let\thechapter=\relax} % no chapter numbers in PDF outline
+\pdfstringdefDisableCommands{\let\thesection=\relax} % no chapter numbers in PDF outline
+\pdfstringdefDisableCommands{\let\thesubsection=\relax} % no chapter numbers in PDF outline
+\makeatother
+
+\part{(Extended) Formulae Sheet}
+\input{parts/formula/formulae.tex}
+
+\makeatletter
+\titlespacing*{\chapter} {0pt}{20pt}{10pt}
+\makeatother
+\part{Past Exams}
+\input{parts/exam/2019-2020.tex}
+
+
+\end{document}
